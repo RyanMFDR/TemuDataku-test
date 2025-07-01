@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { products } from "../data/product";
+import logo from "../assets/logo.webp";
 
 const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
   const [selectedCategory, setSelectedCategory] = useState("Mentoring");
@@ -18,7 +19,7 @@ const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex justify-between items-center h-20 px-4">
         <div className="flex items-center space-x-2">
           <img
-            src="/src/assets/logo.webp"
+            src={logo}
             alt="Logo"
             style={{ width: "200px", height: "200px" }}
             className="object-contain"
