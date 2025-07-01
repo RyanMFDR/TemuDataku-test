@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import { Instagram, Linkedin, MessageSquare, Lock } from "lucide-react";
 import { motion } from "framer-motion";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const LoginPage = ({ onNavigate, onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleLogin = () => {
-    if (email && password) {
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
       onLogin();
       onNavigate("catalog");
+    } catch (err) {
+      setError("Email atau password salah.");
+      console.error("Login error:", err.message);
     }
   };
 
@@ -55,6 +62,10 @@ const LoginPage = ({ onNavigate, onLogin }) => {
               placeholder="Masukkan password"
             />
           </div>
+
+          {error && (
+            <div className="text-red-600 text-sm font-medium">{error}</div>
+          )}
 
           <button
             onClick={handleLogin}
