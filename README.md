@@ -1,12 +1,42 @@
-# React + Vite
+# TemuDataku - Data Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Platform pembelajaran data science yang menyediakan mentoring personal, latihan praktis, dan program bootcamp intensif.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fitur Utama
 
-## Expanding the ESLint configuration
+- Landing Page dengan carousel karir dan FAQ
+- Autentikasi login menggunakan Firebase
+- Katalog produk mentoring & bootcamp
+- Checkout keranjang belanja
+- Navigasi antarkomponen yang simpel dan interaktif
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Cara Menjalankan Secara Lokal
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/temudataku.git
+cd temudataku
+```
+
+### 1.2 OPSIONAL | Jika belum terdapat NPM
+Kunjungi https://nodejs.org dan:
+
+- Pilih versi LTS (Long-Term Support) yang direkomendasikan.
+- Download & install seperti biasa.
+
+### 2. Install Dependency
+```bash
+npm install
+```
+
+### 3. Jalankan Aplikasi
+```bash
+npm run dev
+```
+
+Buka browser dan akses: http://localhost:5173
