@@ -6,7 +6,7 @@ import {
   Home,
   ShoppingCart,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 import { products } from "../data/product";
 
 const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
@@ -53,7 +53,7 @@ const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
         </div>
       </header>
 
-      {/* Konten utama diberi padding top untuk menghindari tertutup header */}
+      {/* Content */}
       <div className="container mx-auto px-4 pt-32 pb-8">
         {/* Page Title */}
         <div className="text-center mb-8">
@@ -82,11 +82,14 @@ const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
           </div>
         </div>
 
-        {/* Products Grid */}
+        {/* Products Grid with animation */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products[selectedCategory].map((product) => (
-            <div
+          {products[selectedCategory].map((product, index) => (
+            <motion.div
               key={product.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <div className="p-6">
@@ -114,7 +117,7 @@ const CatalogPage = ({ onNavigate, onLogout, onAddToCart, cartItems }) => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

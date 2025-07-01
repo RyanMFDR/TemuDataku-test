@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Instagram, Linkedin, MessageSquare, Lock } from "lucide-react";
+import { motion } from "framer-motion";
 
 const LoginPage = ({ onNavigate, onLogin }) => {
   const [email, setEmail] = useState("");
@@ -13,8 +14,13 @@ const LoginPage = ({ onNavigate, onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="bg-gray-50 rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="bg-gray-50 rounded-2xl shadow-2xl p-8 w-full max-w-md"
+      >
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-[#00966C] rounded-full flex items-center justify-center mx-auto mb-4">
             <Lock className="w-8 h-8 text-white" />
@@ -90,7 +96,7 @@ const LoginPage = ({ onNavigate, onLogin }) => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

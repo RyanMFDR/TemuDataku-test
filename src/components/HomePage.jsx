@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import CareerCarousel from "./CareerCarousel";
 import FaqSection from "./FaqSection";
+import { motion } from "framer-motion";
 
 const HomePage = ({ onNavigate }) => {
   return (
@@ -32,7 +33,12 @@ const HomePage = ({ onNavigate }) => {
         </header>
 
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-5xl font-bold text-[#002F6C] mb-6">
             Temukan Passion Anda di Dunia Data
           </h2>
@@ -47,31 +53,51 @@ const HomePage = ({ onNavigate }) => {
           >
             Mulai Belajar Sekarang
           </button>
-        </div>
+        </motion.div>
 
         {/* Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-100 rounded-xl p-6 text-center shadow-sm">
+          <motion.div
+            className="bg-gray-100 rounded-xl p-6 text-center shadow-sm"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0 }}
+          >
             <BookOpen className="w-12 h-12 text-[#00966C] mx-auto mb-4" />
             <h3 className="text-xl font-bold text-[#002F6C] mb-2">Mentoring</h3>
             <p className="text-gray-700">
               Belajar langsung dari expert dengan sesi 1-on-1
             </p>
-          </div>
-          <div className="bg-gray-100 rounded-xl p-6 text-center shadow-sm">
+          </motion.div>
+
+          <motion.div
+            className="bg-gray-100 rounded-xl p-6 text-center shadow-sm"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <Code className="w-12 h-12 text-[#00966C] mx-auto mb-4" />
             <h3 className="text-xl font-bold text-[#002F6C] mb-2">Practice</h3>
             <p className="text-gray-700">
               Latihan hands-on dengan project real-world
             </p>
-          </div>
-          <div className="bg-gray-100 rounded-xl p-6 text-center shadow-sm">
+          </motion.div>
+
+          <motion.div
+            className="bg-gray-100 rounded-xl p-6 text-center shadow-sm"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <Users className="w-12 h-12 text-[#00966C] mx-auto mb-4" />
             <h3 className="text-xl font-bold text-[#002F6C] mb-2">Bootcamp</h3>
             <p className="text-gray-700">
               Program intensif untuk transformasi karir
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Career Carousel */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { faq } from "../data/faq";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -30,11 +31,22 @@ const FAQSection = () => {
                 <ChevronDown className="w-5 h-5 text-[#00966C]" />
               )}
             </button>
-            {openFAQ === faq.id && (
-              <div className="px-6 pb-4">
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </div>
-            )}
+
+            {/* Animated Answer */}
+            <AnimatePresence initial={false}>
+              {openFAQ === faq.id && (
+                <motion.div
+                  key="faq-answer"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-6 pb-4 overflow-hidden"
+                >
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
