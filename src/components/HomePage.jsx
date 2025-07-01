@@ -12,9 +12,9 @@ import FaqSection from "./FaqSection";
 const HomePage = ({ onNavigate }) => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 pt-32 pb-8">
         {/* Header */}
-        <header className="flex justify-between items-center mb-16 h-20">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex justify-between items-center h-20 px-4">
           <div className="flex items-center space-x-2">
             <img
               src="/src/assets/logo.webp"

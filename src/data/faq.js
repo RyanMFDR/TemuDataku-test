@@ -1,27 +1,26 @@
 export const faq = [
   {
     id: 1,
-    question: "Apa saja program yang tersedia di TemuDataku?",
+    question: "Apa yang saya dapatkan nanti setelah mentoring?",
     answer:
-      "Kami menyediakan 3 jenis program: Mentoring (sesi 1-on-1 dengan expert), Practice (latihan hands-on dengan project real), dan Bootcamp (program intensif untuk transformasi karir). Setiap program dirancang untuk berbagai level dari pemula hingga advanced.",
+      "Tentu kamu akan mendapatkan penjelasan materi yang belum kamu pahami dari mentor yang ahli dibidang nya",
   },
   {
     id: 2,
-    question: "Apakah cocok untuk pemula yang belum punya background teknis?",
-    answer:
-      "Sangat cocok! Program kami dirancang untuk semua level, termasuk pemula tanpa background teknis. Kami akan memulai dari dasar-dasar dan membimbing Anda step-by-step hingga mahir.",
+    question: "Apakah saya bisa mentoring secara berkelompok?",
+    answer: "Kamu bisa melakukan mentoring berkelompok 3-5 orang ya",
   },
   {
     id: 3,
-    question: "Berapa lama waktu yang dibutuhkan untuk menyelesaikan program?",
+    question: "Layanan apa saja yang ada di TemuDataku?",
     answer:
-      "Waktu bervariasi tergantung program: Mentoring (1-3 bulan), Practice (2-4 minggu per modul), Bootcamp (3-6 bulan). Kami juga menyediakan fleksibilitas jadwal yang bisa disesuaikan dengan kebutuhan Anda.",
+      "Selain layanan mentoring, terdapat latihan dibidang data science dimana kamu akan diberikan dataset lalu studi kasus untuk pemecahan masalah nya. Dan nantinya ada paket khusus untuk hasil latihan kamu di review oleh mentor",
   },
   {
     id: 4,
-    question: "Apakah ada job guarantee setelah menyelesaikan program?",
+    question: "Data seperti apa yang disediakan oleh TemuDataku?",
     answer:
-      "Kami menyediakan career support yang komprehensif termasuk review CV, mock interview, dan akses ke job portal partner. Meskipun tidak ada guarantee 100%, tingkat penempatan kerja alumni kami mencapai 85% dalam 6 bulan.",
+      "Dari tim TemuDataku akan menyediakan data yang sesuai dengan latihan dan studi kasus yang diberikan. Contoh ketika nanti diberikan studi kasus yang penyelesaiannya dengan model time series maka akan diberikan juga data yang sesuai dengan time series, begitupun jika studi kasus nya adalah klasifikasi",
   },
   {
     id: 5,
